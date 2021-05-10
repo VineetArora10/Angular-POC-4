@@ -1,0 +1,23 @@
+<h1>
+    Employee-Details
+</h1>
+<table class="table table-dark table-striped">
+    <tr>
+        <th>Employee Name</th>
+        <th>Employee ID</th>
+        <th>Employee Department</th>
+        <th>Action</th>
+    </tr>
+    <tr>
+        <td>{{name}}</td>
+        <td>{{id}}</td>
+        <td>{{department}}</td>
+        <td><button  (click)="edit()" class="btn btn-primary">Edit</button></td>
+    </tr>
+  </table>
+  <div *ngIf="editclicked">
+  <input type="text"placeholder="name"[(ngModel)]="emname"><br>
+  <input type="text"placeholder="id"[(ngModel)]="emid"><br>
+  <input type="text"placeholder="dept"[(ngModel)]="emdept"><br>
+  <button (click)="update()"class="btn btn-success">update</button>
+</div>

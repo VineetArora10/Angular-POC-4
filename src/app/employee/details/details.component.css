@@ -1,0 +1,14 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+h1{
+    text-align: center;
+    margin-top: 50px;
+    color: aliceblue;
+}
+input{
+    padding:10px;
+    margin-left:580px ;
+}
+.btn-success{
+    margin-left: 650px;
+    margin-top: 7px;
+}

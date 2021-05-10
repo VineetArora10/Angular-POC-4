@@ -1,0 +1,31 @@
+<div class="container">
+    <input  type="text"id="emp"placeholder="Employeename"[(ngModel)]="Empname">
+    <input type="text"id="empno"placeholder="Employee ID"[(ngModel)]="Empid">
+    <input type="text"id="empdept"placeholder="Employee Department"[(ngModel)]="Empdept">
+    <input type="text"id="empmail"placeholder="Employee Email"[(ngModel)]="EmpEmail">
+    <input type="text"id="emppass"placeholder="Employee Password"[(ngModel)]="EmpPass">
+    <button *ngIf="!isclicked" (click)="add()" class="btn btn-primary">Add</button>
+    <button *ngIf="isclicked" (click)="update()"  class="btn btn-primary">update</button>
+</div>
+
+<table class="table">
+      <tr>
+        <th>Sno</th>
+        <th>EmpName</th>
+        <th>Empid</th>
+        <th>EmpDept</th>
+        <th>Empmail</th>
+        <th>EmpPassword</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let item of data;let i=index"> 
+        <td (click)="row(i)">{{i+1}}</td>
+        <td (click)="row(i)">{{item.name}}</td>
+        <td (click)="row(i)">{{item.id}}</td>
+        <td (click)="row(i)">{{item.department}}</td>
+        <td (click)="row(i)">{{item.email}}</td>
+        <td (click)="row(i)">{{item.password}}</td>
+        <td><button (click)="edit(i)" class="btn btn-success btn-sm">Edit</button>
+        <button (click)="delete(i)" class="btn btn-danger btn-sm">Del</button></td>
+      </tr>
+  </table>
